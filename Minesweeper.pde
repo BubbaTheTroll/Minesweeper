@@ -49,8 +49,7 @@ public void setBombs()
         
             bombs.add(buttons[row][col]);
         }
-        System.out.println(row);
-        System.out.println(col);
+        
         x++;
     }
     
