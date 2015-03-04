@@ -1,6 +1,24 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import de.bezier.guido.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Minesweeper extends PApplet {
 
 
-import de.bezier.guido.*;
+
+
 private boolean gameOver = false;
 private int numMarkedBombs = 0;
 private int NUM_ROWS = 20;
@@ -12,7 +30,7 @@ private ArrayList <MSButton> bombs = new ArrayList <MSButton> ();
 private ArrayList <MSButton> bombs1 = new ArrayList <MSButton> ();
  //ArrayList of just the minesweeper buttons that are mined
 
-void setup ()
+public void setup ()
 {
     size(600, 400);
     textAlign(CENTER,CENTER);
@@ -321,3 +339,12 @@ TO DO:
 
 */
 
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Minesweeper" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
+}
